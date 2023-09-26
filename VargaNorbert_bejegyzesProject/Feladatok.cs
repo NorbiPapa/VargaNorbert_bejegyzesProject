@@ -99,9 +99,6 @@ namespace VargaNorbert_bejegyzesProject
             Console.WriteLine(bejegyzes2[1].ToString());
 
         }
-        private void kiiratas() 
-        {
-            
-        }
+       
     }
 }
