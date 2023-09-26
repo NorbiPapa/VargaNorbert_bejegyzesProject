@@ -30,6 +30,7 @@ namespace VargaNorbert_bejegyzesProject
                 Console.WriteLine(bejegyzes2[i]);
             }
             legnebszerubb();
+            likekerseses();
         }
         private void hozzaad()
         {
@@ -114,6 +115,25 @@ namespace VargaNorbert_bejegyzesProject
             }
             Console.WriteLine($"A leglikoltabb bejegyzés a {leg} {max} like-al");
         }
-        
+        private void likekerseses() 
+        {
+            bool f = false;
+            for (int i = 0; i < bejegyzes.Count; i++)
+            {
+                if (bejegyzes[i].Like>=35)
+                {
+                    f= true;
+                }
+                
+            }
+            if (f=true)
+            {
+                Console.WriteLine("Van 35 like felett");
+            }
+            else 
+            {
+                Console.WriteLine("Nincs 35 like felett");
+            }
+        }
     }
 }
