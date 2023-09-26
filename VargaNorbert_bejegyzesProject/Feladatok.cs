@@ -19,6 +19,7 @@ namespace VargaNorbert_bejegyzesProject
             hozzaad();
             beolvas();
             likeosztas();
+            szoveg();
         }
         private void hozzaad()
         {
@@ -77,6 +78,17 @@ namespace VargaNorbert_bejegyzesProject
             {
                 Console.WriteLine(bejegyzes[i].ToString());
             }
+        }
+
+        private void szoveg() 
+        {
+            Console.WriteLine("Kérek egy szöveget: ");
+            string szoveg = Convert.ToString(Console.ReadLine());
+            bejegyzes2[1].Tartalom = szoveg;
+            Console.WriteLine();
+
+            Console.WriteLine(bejegyzes2[1].Tartalom);
+
         }
     }
 }

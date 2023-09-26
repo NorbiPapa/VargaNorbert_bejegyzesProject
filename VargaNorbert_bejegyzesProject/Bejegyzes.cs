@@ -27,7 +27,16 @@ namespace VargaNorbert_bejegyzesProject
         
         
         public string Szerzo { get => szerzo; }
-        public string Tartalom { get => tartalom; set => tartalom = value;}
+        public string Tartalom
+        {
+            get => tartalom;
+            set
+            {
+                tartalom = value;
+                szerkeztve = DateTime.Now;
+                
+            }
+        }
         public int Like { get => like;}
         public DateTime Letrejott { get => letrejott;}
         public DateTime Szerkeztve { get => szerkeztve;}
