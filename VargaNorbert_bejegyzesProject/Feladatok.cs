@@ -20,6 +20,15 @@ namespace VargaNorbert_bejegyzesProject
             beolvas();
             likeosztas();
             szoveg();
+            kiiratas();
+            for (int i = 0; i < bejegyzes.Count; i++)
+            {
+                Console.WriteLine(bejegyzes[i]);
+            }
+            for (int i = 0; i < bejegyzes.Count; i++)
+            {
+                Console.WriteLine(bejegyzes2[i]);
+            }
         }
         private void hozzaad()
         {
@@ -87,8 +96,12 @@ namespace VargaNorbert_bejegyzesProject
             bejegyzes2[1].Tartalom = szoveg;
             Console.WriteLine();
 
-            Console.WriteLine(bejegyzes2[1].Tartalom);
+            Console.WriteLine(bejegyzes2[1].ToString());
 
+        }
+        private void kiiratas() 
+        {
+            
         }
     }
 }
