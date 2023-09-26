@@ -18,6 +18,7 @@ namespace VargaNorbert_bejegyzesProject
             bejegyzes2= new List<Bejegyzes>();
             hozzaad();
             beolvas();
+            likeosztas();
         }
         private void hozzaad()
         {
@@ -60,6 +61,22 @@ namespace VargaNorbert_bejegyzesProject
                 
             }
             
+        }
+        private void likeosztas() 
+        {
+            
+            Random r=new Random();
+            int szam;
+            for (int i = 0; i < bejegyzes.Count*20; i++)
+            {
+                szam=r.Next(0, bejegyzes.Count);
+
+                bejegyzes[szam].Likeok();
+            }
+            for (int i = 0; i < bejegyzes.Count; i++)
+            {
+                Console.WriteLine(bejegyzes[i].ToString());
+            }
         }
     }
 }
