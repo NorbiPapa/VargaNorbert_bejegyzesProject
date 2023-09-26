@@ -14,6 +14,8 @@ namespace VargaNorbert_bejegyzesProject
         private int like;
         new DateTime letrejott;
         new DateTime szerkeztve;
+        private List<Bejegyzes> bejegyzes;
+        private List<Bejegyzes> bejegyzes2;
 
         public Bejegyzes(string szerzo, string tartalom)
         {
@@ -22,6 +24,10 @@ namespace VargaNorbert_bejegyzesProject
             this.like = 0;
             this.letrejott = DateTime.Today;
             this.szerkeztve = DateTime.Today;
+        }
+        public Feladatok() 
+        {
+            hozzaad();
         }
         
         public string Szerzo { get => szerzo; }
@@ -45,6 +51,30 @@ namespace VargaNorbert_bejegyzesProject
                 return $"{this.szerzo}-{this.like}-{this.letrejott}\n {this.tartalom}";
             }
             
+            
+        }
+        
+        private void hozzaad() 
+        {
+            Console.WriteLine("Kérek egy számot hány darab bejegyzést fog írni :");
+            int bejegyszam=Convert.ToInt32(Console.ReadKey());
+            if (bejegyszam<0)
+            {
+                Console.WriteLine("Természetes számot kérek");
+            }
+            else
+            {
+                for (int i = 0; i < bejegyszam; i++)
+                {
+                    Console.WriteLine("Adjon meg szerzőt: ");
+                    string szerzo=Convert.ToString(Console.ReadKey());
+                    Console.WriteLine("Adjon meg a tartalmat: ");
+                    string tartalom=Convert.ToString(Console.ReadKey());
+                    Bejegyzes b1=new Bejegyzes(szerzo,tartalom);
+                    bejegyzes.Add(b1);
+
+                }
+            }
             
         }
 
