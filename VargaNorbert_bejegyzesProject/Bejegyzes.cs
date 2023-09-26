@@ -23,16 +23,29 @@ namespace VargaNorbert_bejegyzesProject
             this.letrejott = DateTime.Today;
             this.szerkeztve = DateTime.Today;
         }
-
+        
         public string Szerzo { get => szerzo; }
-        public string Tartalom { get => tartalom; set => tartalom = value; }
+        public string Tartalom { get => tartalom; set => tartalom = value;}
         public int Like { get => like;}
         public DateTime Letrejott { get => letrejott;}
         public DateTime Szerkeztve { get => szerkeztve;}
 
         public void Likeok() 
         {
-            like++;
+            this.like++;
+        }
+        public override string ToString()
+        {
+            if (this.letrejott!=this.szerkeztve)
+            {
+                return $"{this.szerzo}-{this.like}-{this.letrejott}\n Szerkeztve: {this.szerkeztve}\n {this.tartalom}";
+            }
+            else
+            {
+                return $"{this.szerzo}-{this.like}-{this.letrejott}\n {this.tartalom}";
+            }
+            
+            
         }
 
     }
