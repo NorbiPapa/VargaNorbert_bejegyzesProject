@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace VargaNorbert_bejegyzesProject
 {
@@ -10,6 +11,8 @@ namespace VargaNorbert_bejegyzesProject
     {
         static void Main(string[] args)
         {
+            Feladatok feladatok = new Feladatok();
+            Console.ReadKey();
         }
     }
 }
