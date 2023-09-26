@@ -31,6 +31,7 @@ namespace VargaNorbert_bejegyzesProject
             }
             legnebszerubb();
             likekerseses();
+            kevesebblike();
         }
         private void hozzaad()
         {
@@ -134,6 +135,18 @@ namespace VargaNorbert_bejegyzesProject
             {
                 Console.WriteLine("Nincs 35 like felett");
             }
+        }
+        private void kevesebblike() 
+        {
+            int szam = 0;
+            for (int i = 0; i < bejegyzes.Count; i++)
+            {
+                if (bejegyzes[i].Like<15)
+                {
+                    szam++;
+                }
+            }
+            Console.WriteLine($"{szam} ennyi 15-nél kevesebb like van");
         }
     }
 }
