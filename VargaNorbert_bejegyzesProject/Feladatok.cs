@@ -20,15 +20,16 @@ namespace VargaNorbert_bejegyzesProject
             beolvas();
             likeosztas();
             szoveg();
-            kiiratas();
+            
             for (int i = 0; i < bejegyzes.Count; i++)
             {
                 Console.WriteLine(bejegyzes[i]);
             }
-            for (int i = 0; i < bejegyzes.Count; i++)
+            for (int i = 0; i < bejegyzes2.Count; i++)
             {
                 Console.WriteLine(bejegyzes2[i]);
             }
+            legnebszerubb();
         }
         private void hozzaad()
         {
@@ -99,6 +100,20 @@ namespace VargaNorbert_bejegyzesProject
             Console.WriteLine(bejegyzes2[1].ToString());
 
         }
-       
+       private void legnebszerubb() 
+        {
+            string leg = "";
+            int max = 0;
+            for (int i = 0; i < bejegyzes.Count; i++)
+            {
+                if (bejegyzes[i].Like>max)
+                {
+                    max = bejegyzes[i].Like;
+                    leg = bejegyzes[i].Szerzo;
+                }
+            }
+            Console.WriteLine($"A leglikoltabb bejegyzés a {leg} {max} like-al");
+        }
+        
     }
 }
