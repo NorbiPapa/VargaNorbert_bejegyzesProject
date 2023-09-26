@@ -126,7 +126,7 @@ namespace VargaNorbert_bejegyzesProject
                 }
                 
             }
-            if (f=true)
+            if (f==true)
             {
                 Console.WriteLine("Van 35 like felett");
             }
